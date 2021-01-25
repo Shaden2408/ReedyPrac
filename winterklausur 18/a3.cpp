@@ -25,6 +25,21 @@ using namespace std;
 
 int main(void)
 {
+    int zahl;
+    cin >> zahl;
+    
+    while(zahl != 1)
+    {
+        if((zahl%2)==0)
+        {
+            zahl /= 2;
+        }
+        else
+        {
+            zahl = (3*zahl) + 1;
+        }
 
+        cout << zahl << ", ";
+    }
     return 0;
 }

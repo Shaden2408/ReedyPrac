@@ -15,8 +15,26 @@
 
 using namespace std;
 
-int main(void)
+int main(int argc, char *argv[])
 {
+    int zähler1 = 0;
+    int zähler2 = 0;
+
+    for (int i = 1; i < argc; i++)
+    {
+        int zahl = atoi(argv[i]);
+        if ((zahl % 2) == 0)
+        {
+            zähler1++;
+        }
+        if ((zahl % 10) == 5)
+        {
+            zähler2++;
+        }
+    }
+
+    cout << "Anz. gerade: " << zähler1 << endl;
+    cout << "Anz. 5 ende: " << zähler2 << endl;
 
     return 0;
 }

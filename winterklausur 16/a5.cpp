@@ -77,8 +77,6 @@ int vergleich(const void *av, const void *bv)
     {
         return p1->name.compare(p2->name);
     }
-    else
-    {
-        return zeit1 - zeit2;
-    }
+
+    return zeit1 - zeit2;
 }

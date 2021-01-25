@@ -36,7 +36,9 @@ struct staat
     int einwohnerzahl;
     float flaeche;
 } land[8];
+
 int vergleich(const void *a, const void *b);
+
 int main(void)
 {
     int n = 0;
@@ -57,5 +59,11 @@ int main(void)
 }
 int vergleich(const void *a, const void *b)
 {
-    // Diese Funktion sollen Sie implementieren.
+    struct staat *p1 = (struct staat *)a;
+    struct staat *p2 = (struct staat *)b;
+
+    int density1 = p1->einwohnerzahl / p1->flaeche;
+    int density2 = p2->einwohnerzahl / p2->flaeche;
+
+    return (density2 - density1); // weil absteigend
 }

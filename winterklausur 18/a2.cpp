@@ -20,11 +20,37 @@
 // <cmath> einbinden.
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-int main(void)
+int main()
 {
+    double eingabe;
+    double lilboi = 0;
+    int zaehler1 = 0;
+    const double pi = 3.14159265358979323846;
+
+    while((cin >> eingabe))
+    {
+        if (eingabe <= 0) break;
+        if(eingabe<lilboi && lilboi != 0)
+        {
+            lilboi = eingabe;
+        }
+        else if (lilboi == 0)
+        {
+            lilboi = eingabe;
+        }
+        
+        if(fabs(pi-eingabe)<0.01)
+        {
+            zaehler1++;
+        }
+    }
+    
+    cout << zaehler1 << endl;
+    cout << "lilboi: " << lilboi << endl;
 
     return 0;
 }

@@ -12,11 +12,26 @@
 // zurück.
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
-int main(void)
+int main(int argc, char* argv[])
 {
+    string word;
+    int length;
+    int longboi = 0;
+    for(int i=1; i<argc; i++)
+    {
+        length=strlen(argv[i]);
+        if(length>longboi)
+        {
+            longboi = length;
+            word = argv[i];
+        }
+    }
 
+    word.length();
+    cout << "Laengstes Wort: " << word << endl;
     return 0;
 }

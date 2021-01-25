@@ -61,5 +61,16 @@ int main(void)
 }
 int vergleich(const void *av, const void *bv)
 {
-    // Diese Funktion sollen Sie implementieren.
+    struct datenbank *p1 = (struct datenbank *)av;
+    struct datenbank *p2 = (struct datenbank *)bv;
+
+    double avg1 = p1->note;
+    double avg2 = p2->note;
+    
+    if(avg1==avg2)
+    {
+        return p1->name.compare(p2->name);
+    }   
+
+    return (avg1 - avg2); 
 }

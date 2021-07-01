@@ -22,7 +22,7 @@ int main(void)
     float eingabe = 0.0f;
     float bigboi = 0.0f;
     int anzahl = 0;
-    int count = 0;
+    bool ersteEingabe = true;
 
     while (cin >> eingabe) // Schema bei Eingabe aller Werte in eine Zeile 
     {
@@ -34,17 +34,16 @@ int main(void)
         {
             bigboi = eingabe;
         }
-        else if (!count && eingabe < 0)
+        else if (ersteEingabe && eingabe < 0)
         {
             bigboi = eingabe;
+            ersteEingabe = false;
         }
 
         if (eingabe >= 0 && eingabe <= 100)
         {
             anzahl++;
         }
-
-        count++;
     }
     cout << "anz " << anzahl << endl;
     cout << "biggest of the bois " << bigboi << endl;

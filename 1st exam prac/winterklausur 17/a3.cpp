@@ -15,8 +15,8 @@ int main(void)
         W+=(pow(-1,n))/(2*n+1); // "+=" zum aufsummieren
         x=W-(pee/4);
 
-        if(fabs(x) < 0.001) break;
         cout << "n= " << n << ", Wert= " << W << ", Abweichung= " << fabs(x) << endl;
+        if(fabs(x) < 0.001) break;
         n++;
     }
     return 0;

@@ -30,14 +30,14 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-struct staat
+struct staat              //bauanleitung
 {
     string name;
     int einwohnerzahl;
     float flaeche;
-} land[8];
+} land[8];                //bauanleitung angewendet
 
-int vergleich(const void *a, const void *b);
+int vergleich(const void *a, const void *b);    //void pointer weil keine ahnung welcher typ
 
 int main(void)
 {
@@ -59,7 +59,7 @@ int main(void)
 }
 int vergleich(const void *a, const void *b)
 {
-    struct staat *p1 = (struct staat *)a;
+    struct staat *p1 = (struct staat *)a;          //(typ)a   -> typ auf a casten (von struct staat)
     struct staat *p2 = (struct staat *)b;
 
     int density1 = p1->einwohnerzahl / p1->flaeche;

@@ -19,7 +19,7 @@ int main(void)
 
    while(input!=65)
    {
-       cin >> input;    //wozu nochmal?
+       cin >> input;    
        if(input>65 && input<91)
        {
            count2++;

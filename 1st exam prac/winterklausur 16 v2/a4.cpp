@@ -19,7 +19,7 @@ int main(int argc, char* argv[])  // argc argumentCount, argv argumentValue // a
     int big=0;
     for(int i=1; i<argc; i++)     //i ist nur die "Stelle" der Zahl (count)
     {
-        int num=atoi(argv[i]);     //wählen der jeweiligen zahl anhand ihrer position
+        int num=atoi(argv[i]);    //wählen der jeweiligen zahl anhand ihrer position
         int test=num%3;
         if(test==0)
         {
